@@ -101,7 +101,7 @@
     loginMessage.textContent = 'Sending sign-in link…';
     const { error } = await client.auth.signInWithOtp({
       email: ownerEmail,
-      options: { emailRedirectTo: location.href.split('#')[0], shouldCreateUser: true }
+      options: { emailRedirectTo: location.href.split('#')[0], shouldCreateUser: false }
     });
     button.disabled = false;
     if (error) showError(loginMessage, `Could not send the sign-in link: ${error.message}`);
