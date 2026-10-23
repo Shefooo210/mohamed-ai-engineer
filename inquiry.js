@@ -31,7 +31,7 @@
       });
       if (!response.ok) throw new Error(`Request service returned ${response.status}`);
       form.reset();
-      status.textContent = arabic ? 'تم حفظ طلبك. محمد هيراجعه ويرد عليك على بريدك الإلكتروني.' : 'Your request was saved. Mohamed will review it and reply to your email.';
+      status.textContent = arabic ? 'تم حفظ طلبك. هنراجعه ونرد عليك على بريدك الإلكتروني.' : 'Your request was saved. We will review it and reply to your email.';
     } catch (error) {
       console.error('Inquiry submission failed:', error);
       status.textContent = arabic ? 'الطلب ما اتحفظش. حاول تاني أو ابعت التفاصيل على البريد الظاهر في الصفحة.' : 'Your request could not be saved. Please try again later, or use the email link on this page.';
